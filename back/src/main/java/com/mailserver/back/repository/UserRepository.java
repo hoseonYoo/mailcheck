@@ -8,6 +8,8 @@ import com.mailserver.back.entity.UserEntity;
 @Repository
 public interface UserRepository extends JpaRepository<UserRepository, String> {
 
+  boolean existsByUserId(String userId);
+
   UserEntity findByUserId(String userId);
 
 }
